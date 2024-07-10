@@ -17,7 +17,7 @@ const pages = [
         {
             pages.map(({ name, href }, key) => (
                 <>
-                    <a class="nav-link" href={href}>
+                    <a class={"nav-link"} href={href}>
                         {name}
                     </a>
                 </>
@@ -28,10 +28,29 @@ const pages = [
 
 <style>
     .nav-link {
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 2px;
+        padding-top: 10px;
     }
-    .nav-link:hover {
+
+    .nav-link::after {
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: black;
+        opacity: 80;
+        transition:
+            width 0.3s ease 0s,
+            left 0.3s ease 0s;
+        width: 0;
+    }
+    a:hover:after {
+        width: 100%;
+        left: 0%;
     }
 </style>
 
-<script>
-</script>
+<script></script>
