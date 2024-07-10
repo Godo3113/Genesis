@@ -1,0 +1,37 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+
+const pages = [
+    { name: "Home", href: "/" },
+    { name: "Video", href: "/Video" },
+    { name: "Social Media", href: "/SocialMedia" },
+    { name: "Editorial", href: "/Editorial" },
+];
+---
+
+<header class="py-8 px-20 inline-flex justify-between mx-auto w-full">
+    <h2 class="">Furious Mushroom</h2>
+    <nav class="flex flew-row gap-x-8">
+        {
+            pages.map(({ name, href }, key) => (
+                <>
+                    <a class="nav-link" href={href}>
+                        {name}
+                    </a>
+                </>
+            ))
+        }
+    </nav>
+</header>
+
+<style>
+    .nav-link {
+    }
+    .nav-link:hover {
+    }
+</style>
+
+<script>
+</script>
