@@ -1,0 +1,28 @@
+---
+import ArticleCard from './ArticleCard.astro';
+
+const covers = [
+    { title: "Disk 1" , body:"Esto es la primera prueba. Y tengo que probar un salto de linea", href:"", image:""}, 
+    { title: "Disk 2" , body:"Esto es la segunda prueba. Y tengo que probar un salto de linea", href:"", image:""}, 
+    { title: "Test Disk" , body:"Esto es la tercera prueba. Y tengo que probar un salto de linea", href:"", image:""}, 
+    { title: "Best Disk" , body:"Esto es la cuarta prueba. Y tengo que probar un salto de linea", href:"", image:""}, 
+    { title: "Disk 3" , body:"Esto es la quinta prueba. Y tengo que probar un salto de linea", href:"", image:""},
+    { title: "Disk 4" , body:"Esto es la Sexta prueba. Y tengo que probar un salto de linea", href:"", image:""}
+];
+
+---
+
+<h1 class="text-5xl font-bold underline px-12 py-8">My Work</h1>
+<section class="grid 2xl:grid-cols-5 md:grid-cols-3 sm:grid-cols-1 justify-between">
+    {
+        covers.map(( {title, body, href, image }, index) => (
+            <ArticleCard 
+                title={title}
+                href={href}
+                body={body}
+                image={image}
+            />
+        ))
+    }
+    
+</section>
