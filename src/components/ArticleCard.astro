@@ -13,7 +13,7 @@ const { href, title, body, image } = Astro.props;
 ---
 
 
-<main class="mb-8 border-2 max-w-96 border-black rounded-md mx-12">
+<a href={href} target="_blank" class="mb-8 border-2 max-w-96 border-black rounded-md mx-12">
 	<h3 class="text-right px-6 py-2">{title}</h3>
 	<Image 
 		class="object-fill"
@@ -23,4 +23,4 @@ const { href, title, body, image } = Astro.props;
   		loading="lazy"
 	/>
 	<p class="p-1">{body}</p>
-</main>
+</a>
